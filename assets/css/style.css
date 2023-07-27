@@ -29,6 +29,15 @@ body{
 .top-socialbar ul.right-social-list{
    display: flex;
 }
+
+.top-socialbar ul.right-social-list li a span{
+    -webkit-transition: width 2s,-webkit-transform 2s;
+}
+.top-socialbar ul.right-social-list li a span:hover{
+   color: var(--black);
+   display: inline-block;
+   -webkit-transform:rotateY(-360deg);
+}
 .top-socialbar ul li{
    padding: 12px;
 }
