@@ -1,7 +1,8 @@
 *{
     padding: 0;
     margin: 0;
-    --primary-color:#D50000;
+    --primary-color:rgb(213, 0, 0);
+    --primary-color-transparent:rgb(213, 0, 0, 0.6);
     --white:#ffffff;
     --black:#000000;
     --black-transparent:rgba(0,0,0, 0.6)
@@ -13,8 +14,43 @@ body{
     width: 1170px;
     margin: 0 auto;
 }
-.top-socialbar{
+
+.header .hero-wrapper{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -3;
+}
+.hero-top-text{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    
+    text-align: center;
+}
+.hero-top-text h1{
+    color: var(--white);
+    font-size: 96px;
+}
+.hero-top-text a{
+    color: var(--white);
+    padding: 12px 24px;
     background-color: var(--primary-color);
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 1s;
+}
+.hero-top-text a:hover{
+    color: var(--primary-color);
+    background-color: var(--white);
+}
+.header .hero-wrapper img{
+    width: 100%;
+}
+.top-socialbar{
+    background-color: var(--primary-color-transparent);
 }
 .socialbar-inner{
     display: flex;
@@ -83,4 +119,9 @@ body{
     background-color: var(--primary-color);
     padding: 6px 12px;
     border-radius: 6px;
+}
+
+
+.lead-text{
+    position: static;
 }
