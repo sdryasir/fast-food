@@ -14,12 +14,15 @@ body{
     width: 1170px;
     margin: 0 auto;
 }
+.header-wrapper{
 
-.header .hero-wrapper{
+    position: relative;
+}
+.header{
     position: absolute;
     width: 100%;
     top: 0;
-    z-index: -3;
+    
 }
 .hero-top-text{
     position: absolute;
