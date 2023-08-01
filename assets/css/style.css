@@ -5,7 +5,8 @@
     --primary-color-transparent:rgb(213, 0, 0, 0.6);
     --white:#ffffff;
     --black:#000000;
-    --black-transparent:rgba(0,0,0, 0.6)
+    --black-transparent:rgba(0,0,0, 0.6);
+    --gray-transparent:rgba(167,167,167,.4);
 }
 body{
     font-family: 'Oswald', sans-serif;
@@ -14,6 +15,11 @@ body{
     width: 1170px;
     margin: 0 auto;
 }
+
+.sec-space{
+    padding: 70px 0;
+}
+
 .header-wrapper{
 
     position: relative;
@@ -126,5 +132,60 @@ body{
 
 
 .lead-text{
-    position: static;
+    text-align: center;
+    font-size: 32px;
+}
+.lead-text h2{
+    position: relative;
+    display: inline-block;
+    color: var(--primary-color);
+}
+.lead-text h2::after{
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: var(--gray-transparent);
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -32px;
+}
+.lead-text h2::before{
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: var(--gray-transparent);
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -32px;
+    
+}
+
+
+.menu-inner-wrapper{
+    display: flex;
+}
+.menu-inner-wrapper .menu-card{
+    width: 25%;
+    position: relative;
+    margin: 0 10px;
+}
+.overlay{
+    position: absolute;
+    inset: 0;
+    background-color: var(--black-transparent);
+}
+.menu-inner-wrapper .menu-card img{
+    width: 100%;
+    display: block;
+}
+.menu-inner-wrapper .menu-card h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
 }
