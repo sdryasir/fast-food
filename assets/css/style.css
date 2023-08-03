@@ -55,7 +55,7 @@ body{
     color: var(--primary-color);
     background-color: var(--white);
 }
-.header .hero-wrapper img{
+.hero-wrapper img{
     width: 100%;
 }
 .top-socialbar{
@@ -109,7 +109,9 @@ body{
 }
 .main-navbar ul li:last-child{
     margin-right: 0;
+    
 }
+
 .main-navbar ul li{
     margin: 0 6px;
 }
@@ -124,6 +126,9 @@ body{
     padding: 6px 12px;
     border-radius: 6px;
 }
+.last-child:hover{
+    background-color: transparent!important;
+}
 .active{
     background-color: var(--primary-color);
     padding: 6px 12px;
@@ -134,6 +139,7 @@ body{
 .lead-text{
     text-align: center;
     font-size: 32px;
+    margin-bottom: 32px;
 }
 .lead-text h2{
     position: relative;
@@ -178,6 +184,12 @@ body{
     inset: 0;
     background-color: var(--black-transparent);
 }
+.overlay-hover{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+}
 .menu-inner-wrapper .menu-card img{
     width: 100%;
     display: block;
@@ -188,4 +200,36 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--white);
+}
+
+
+.menu-card:hover .overlay-hover{
+    opacity: 1;
+    transition: all 1s;
+}
+.menu-card:hover .overlay h2{
+    display: none;
+}
+.overlay-hover .rect{
+    width: 200px;
+    height: 200px;
+    border: 2px solid #fff;
+    rotate: 45deg;
+    position: absolute;
+    top: 72%;
+    left: 16%;
+    transform: translate(-50%, -50%);
+    scale: 0;
+    transition: scale 1s;
+}
+.menu-card:hover .overlay-hover .rect{
+    scale: 1;
+}
+.overlay-hover p{
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    font-size: 22px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
